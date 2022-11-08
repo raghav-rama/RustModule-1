@@ -8,13 +8,12 @@ enum Direction {
 }
 
 fn main() {
-    let dire = Direction::South;
+    let dire = Direction::North;
     match dire {
         Direction::East => println!("East"),
-        __  => { // Matching South or North here
+        Direction::North | Direction::South  => { // Matching South or North here
             println!("South or North");
         },
-        _ => println!(__),
+        _ => println!("invalid"),
     };
 }
-
